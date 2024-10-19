@@ -23,23 +23,23 @@ namespace project3_api.Migrations
 
             modelBuilder.Entity("project3_api.Models_Tables_.Product_table", b =>
                 {
-                    b.Property<int>("product_id")
+                    b.Property<int>("productId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("product_id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("productId"));
 
-                    b.Property<string>("product_name")
+                    b.Property<string>("productName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("product_price")
+                    b.Property<int>("productPrice")
                         .HasColumnType("int");
 
-                    b.Property<int>("product_stock")
+                    b.Property<int>("productStock")
                         .HasColumnType("int");
 
-                    b.HasKey("product_id");
+                    b.HasKey("productId");
 
                     b.ToTable("Product_Tables");
                 });
